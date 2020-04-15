@@ -14,7 +14,8 @@
     "gatsby-transformer-sharp": "^2.1.4",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "snyk": "^1.305.1"
   },
   "keywords": [
     "gatsby",
@@ -28,7 +29,9 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "jest"
+    "test": "jest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
@@ -45,5 +48,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby"
-  }
+  },
+  "snyk": true
 }
