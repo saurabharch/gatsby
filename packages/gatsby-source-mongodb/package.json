@@ -10,7 +10,8 @@
     "@babel/runtime": "^7.0.0",
     "lodash": "^4.17.10",
     "mongodb": "^2.2.30",
-    "query-string": "^6.1.0"
+    "query-string": "^6.1.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -31,8 +32,10 @@
   "repository": "https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-mongodb",
   "scripts": {
     "build": "babel src --out-dir . --ignore **/__tests__",
-    "prepare": "cross-env NODE_ENV=production npm run build",
-    "watch": "babel -w src --out-dir . --ignore **/__tests__"
+    "prepare": "npm run snyk-protect && cross-env NODE_ENV=production npm run build",
+    "watch": "babel -w src --out-dir . --ignore **/__tests__",
+    "snyk-protect": "snyk protect"
   },
-  "gitHead": "5bd5aebe066b9875354a81a4b9ed98722731c465"
+  "gitHead": "5bd5aebe066b9875354a81a4b9ed98722731c465",
+  "snyk": true
 }
