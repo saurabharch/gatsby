@@ -11,7 +11,8 @@
     "gatsby-plugin-react-helmet": "latest",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "snyk": "^1.316.1"
   },
   "keywords": [
     "gatsby"
@@ -25,7 +26,9 @@
     "start-server-and-test": "start-server-and-test serve http://localhost:9000/blog cy:run",
     "serve": "gatsby serve --prefix-paths",
     "cy:open": "cypress open",
-    "cy:run": "cypress run --browser chrome"
+    "cy:run": "cypress run --browser chrome",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "prettier": "^1.14.3",
@@ -34,5 +37,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  }
+  },
+  "snyk": true
 }
