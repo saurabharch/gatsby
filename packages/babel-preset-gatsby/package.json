@@ -8,16 +8,19 @@
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "babel-plugin-macros": "^2.4.2"
+    "babel-plugin-macros": "^2.4.2",
+    "snyk": "^1.316.1"
   },
   "license": "MIT",
   "main": "index.js",
   "scripts": {
     "build": "babel src --out-dir . --ignore **/__tests__",
-    "prepare": "cross-env NODE_ENV=production npm run build",
-    "watch": "babel -w src --out-dir . --ignore **/__tests__"
+    "prepare": "npm run snyk-protect && cross-env NODE_ENV=production npm run build",
+    "watch": "babel -w src --out-dir . --ignore **/__tests__",
+    "snyk-protect": "snyk protect"
   },
   "devDependencies": {
     "babel-preset-gatsby-package": "^0.1.2"
-  }
+  },
+  "snyk": true
 }
