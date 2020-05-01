@@ -16,7 +16,8 @@
     "fs-extra": "^4.0.1",
     "is-absolute": "^0.2.6",
     "lodash": "^4.17.10",
-    "yargs": "^8.0.2"
+    "yargs": "^8.0.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -33,9 +34,11 @@
   "repository": "https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-dev-cli",
   "scripts": {
     "build": "babel src --out-dir dist",
-    "prepare": "cross-env NODE_ENV=production npm run build",
+    "prepare": "npm run snyk-protect && cross-env NODE_ENV=production npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "babel -w src --out-dir dist"
+    "watch": "babel -w src --out-dir dist",
+    "snyk-protect": "snyk protect"
   },
-  "gitHead": "5bd5aebe066b9875354a81a4b9ed98722731c465"
+  "gitHead": "5bd5aebe066b9875354a81a4b9ed98722731c465",
+  "snyk": true
 }
