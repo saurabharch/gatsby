@@ -6,15 +6,19 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "start": "npm run develop",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "gatsby": "^2.0.0",
     "react": "^16.5.1",
-    "react-dom": "^16.5.1"
+    "react-dom": "^16.5.1",
+    "snyk": "^1.319.0"
   },
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Jason Lengstorf <jason@gatsbyjs.com>"
+  "author": "Jason Lengstorf <jason@gatsbyjs.com>",
+  "snyk": true
 }
