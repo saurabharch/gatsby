@@ -9,7 +9,8 @@
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-redux": "5.0.5",
-    "redux": "3.6.0"
+    "redux": "3.6.0",
+    "snyk": "^1.319.0"
   },
   "keywords": [
     "gatsby"
@@ -20,6 +21,9 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "start": "npm run develop",
-    "serve": "gatsby serve"
-  }
+    "serve": "gatsby serve",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
