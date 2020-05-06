@@ -18,7 +18,8 @@
     "react-dom": "^16.4.0",
     "react-typography": "^0.16.13",
     "typography": "^0.15.8",
-    "typography-theme-bootstrap": "^0.15.10"
+    "typography-theme-bootstrap": "^0.15.10",
+    "snyk": "^1.319.0"
   },
   "keywords": [
     "gatsby",
@@ -29,6 +30,9 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "start": "npm run develop"
-  }
+    "start": "npm run develop",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
