@@ -19,7 +19,8 @@
     "slash": "^1.0.0",
     "cxs": "^6.2.0",
     "typography": "^0.16.17",
-    "typography-breakpoint-constants": "^0.15.10"
+    "typography-breakpoint-constants": "^0.15.10",
+    "snyk": "^1.319.0"
   },
   "keywords": [
     "gatsby"
@@ -28,6 +29,9 @@
   "main": "n/a",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build"
-  }
+    "build": "gatsby build",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
