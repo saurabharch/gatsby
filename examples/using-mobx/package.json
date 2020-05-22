@@ -10,7 +10,9 @@
     "lint": "eslint **/*.{js,jsx} --quiet -o linterrors.txt --ignore-path .gitignore",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gh-pages -b gh-pages -d public",
-    "pre-deploy": "gatsby build --prefix-paths"
+    "pre-deploy": "gatsby build --prefix-paths",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "main": "n/a",
   "keywords": [
@@ -25,7 +27,8 @@
     "mobx-react": "^5.2.8",
     "mobx-react-devtools": "^6.0.3",
     "react": "^16.5.0",
-    "react-dom": "^16.5.0"
+    "react-dom": "^16.5.0",
+    "snyk": "^1.324.0"
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
@@ -38,5 +41,6 @@
     "eslint-plugin-react": "^7.11.1",
     "gh-pages": "^1.2.0",
     "prettier": "^1.14.2"
-  }
+  },
+  "snyk": true
 }
