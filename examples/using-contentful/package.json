@@ -18,7 +18,8 @@
     "react-typography": "^0.16.3",
     "slash": "^2.0.0",
     "typography": "^0.16.7",
-    "typography-breakpoint-constants": "^0.15.0"
+    "typography-breakpoint-constants": "^0.15.0",
+    "snyk": "^1.332.0"
   },
   "keywords": [
     "gatsby"
@@ -31,6 +32,9 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "start": "gatsby serve"
-  }
+    "start": "gatsby serve",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
