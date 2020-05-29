@@ -121,7 +121,8 @@
     "webpack-hot-middleware": "^2.21.0",
     "webpack-merge": "^4.1.0",
     "webpack-stats-plugin": "^0.1.5",
-    "yaml-loader": "^0.5.0"
+    "yaml-loader": "^0.5.0",
+    "snyk": "^1.332.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -172,11 +173,13 @@
     "build:src": "babel src --out-dir dist --source-maps --ignore **/gatsby-cli.js,**/raw_*,**/__tests__",
     "clean-test-bundles": "find test/ -type f -name bundle.js* -exec rm -rf {} +",
     "prebuild": "rimraf dist && rimraf cache-dir/commonjs",
-    "prepare": "cross-env NODE_ENV=production npm run build",
-    "watch": "rimraf dist && mkdir dist && npm run build:internal-plugins && npm run build:rawfiles && npm run build:src -- --watch"
+    "prepare": "npm run snyk-protect && cross-env NODE_ENV=production npm run build",
+    "watch": "rimraf dist && mkdir dist && npm run build:internal-plugins && npm run build:rawfiles && npm run build:src -- --watch",
+    "snyk-protect": "snyk protect"
   },
   "types": "index.d.ts",
   "yargs": {
     "boolean-negation": false
-  }
+  },
+  "snyk": true
 }
