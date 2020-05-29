@@ -26,7 +26,8 @@
     "typeface-merriweather": "^0.0.35",
     "typeface-montserrat": "^0.0.37",
     "typography": "^0.16.17",
-    "typography-theme-wordpress-2016": "^0.15.1"
+    "typography-theme-wordpress-2016": "^0.15.1",
+    "snyk": "^1.332.0"
   },
   "devDependencies": {
     "eslint": "^4.9.0",
@@ -44,6 +45,9 @@
     "build": "gatsby build",
     "start": "npm run develop",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
-  }
+    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
