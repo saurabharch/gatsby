@@ -5,7 +5,9 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "start": "npm run develop"
+    "start": "npm run develop",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "emotion": "^9.2.12",
@@ -28,8 +30,10 @@
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.13",
     "typography": "^0.16.17",
-    "typography-theme-bootstrap": "^0.16.7"
+    "typography-theme-bootstrap": "^0.16.7",
+    "snyk": "^1.333.0"
   },
   "author": "Andrew Wyatt <andrewrwyatt@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
