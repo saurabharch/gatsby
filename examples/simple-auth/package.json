@@ -9,7 +9,8 @@
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "snyk": "^1.336.0"
   },
   "keywords": [
     "gatsby"
@@ -20,6 +21,9 @@
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "start": "npm run develop",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
