@@ -10,7 +10,8 @@
     "gatsby-source-filesystem": "^2.0.1",
     "gatsby-transformer-remark": "^2.1.1",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "snyk": "^1.336.0"
   },
   "keywords": [
     "gatsby"
@@ -20,6 +21,9 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "start": "npm run develop"
-  }
+    "start": "npm run develop",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
