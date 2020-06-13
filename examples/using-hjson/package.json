@@ -9,13 +9,17 @@
     "gatsby-source-filesystem": "^2.0.1",
     "gatsby-transformer-hjson": "^2.1.1",
     "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react-dom": "^16.3.2",
+    "snyk": "^1.339.2"
   },
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "start": "npm run develop"
-  }
+    "start": "npm run develop",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
