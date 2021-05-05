@@ -107,7 +107,7 @@
     "sift": "^5.1.0",
     "signal-exit": "^3.0.2",
     "slash": "^1.0.0",
-    "socket.io": "^2.0.3",
+    "socket.io": "^3.0.0",
     "string-similarity": "^1.2.0",
     "style-loader": "^0.21.0",
     "terser-webpack-plugin": "^1.0.2",
