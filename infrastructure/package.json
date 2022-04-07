@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "async": "^2.6.0",
+    "async": "^3.2.2",
     "graphql-request": "^1.4.0",
     "s3": "^4.4.0",
     "shelljs": "^0.7.8"
