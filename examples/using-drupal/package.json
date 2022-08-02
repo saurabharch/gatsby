@@ -26,7 +26,7 @@
     "typeface-josefin-slab": "^0.0.43",
     "typeface-rochester": "^0.0.43",
     "typography": "^0.16.16",
-    "typography-breakpoint-constants": "^0.14.0"
+    "typography-breakpoint-constants": "^0.16.19"
   },
   "keywords": [
     "gatsby"
