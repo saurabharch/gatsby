@@ -19,7 +19,7 @@
     "slash": "^1.0.0",
     "cxs": "^6.2.0",
     "typography": "^0.16.17",
-    "typography-breakpoint-constants": "^0.15.10"
+    "typography-breakpoint-constants": "^0.16.19"
   },
   "keywords": [
     "gatsby"
