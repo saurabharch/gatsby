@@ -15,6 +15,6 @@
     "lodash": "^4.17.10",
     "request": "^2.81.0",
     "request-promise": "^4.2.0",
-    "webhook-discord": "^2.0.6"
+    "webhook-discord": "^2.1.0"
   }
 }
