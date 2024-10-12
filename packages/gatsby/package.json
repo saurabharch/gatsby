@@ -38,7 +38,7 @@
     "core-js": "^2.5.0",
     "css-loader": "^1.0.0",
     "debug": "^3.1.0",
-    "del": "^3.0.0",
+    "del": "^8.0.0",
     "detect-port": "^1.2.1",
     "devcert-san": "^0.3.3",
     "domready": "^1.0.8",
